@@ -1,0 +1,1046 @@
+/* CSS Settingan Default */
+body {
+    background: #fff;
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    border: 3px solid;
+    color: #1de099;
+}
+
+@media (max-width: 991px) {
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+a {
+    color: #1dc8cd;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #1dc9ce;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* CSS Tombol Kembali Ke Atas */
+.back-to-top {
+    position: fixed;
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    right: 15px;
+    bottom: 0;
+    transition: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 64px;
+    height: 34px;
+}
+
+.back-to-top i {
+    line-height: 0;
+    font-size: 20px;
+}
+
+.back-to-top:focus {
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+    color: #fff;
+    outline: none;
+}
+
+.back-to-top:hover {
+    background: #1dc8cd;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CSS Header */
+#header {
+    height: 90px;
+    transition: all 0.5s;
+    z-index: 997;
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+}
+
+#header.header-transparent {
+    background: transparent;
+}
+
+#header.header-scrolled {
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+    height: 65px;
+    transition: all 0.5s;
+    padding-bottom: 3px;
+}
+
+#logo {
+    width: max-content;
+    display: flex;
+}
+
+#header #logo h1 {
+    font-size: 32px;
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 20px;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+    color: #fff;
+}
+
+#header #logo img {
+    margin-top: 13px;
+    height: 55px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.13);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    #header #logo h1 {
+        font-size: 28px;
+    }
+
+    #header #logo img {
+        max-height: 45px;
+    }
+}
+
+/* CSS Desktop Navbar */
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar>ul>li {
+    white-space: nowrap;
+    padding: 10px 0 10px 24px;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    padding: 0 2px;
+    white-space: nowrap;
+    transition: 0.3s;
+    letter-spacing: 0.4px;
+    position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #fff;
+}
+
+
+/* CSS Navbar Mobile */
+.mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.9);
+    transition: 0.3s;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.navbar-mobile>ul>li {
+    padding: 0;
+}
+
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
+    visibility: hidden;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+    color: #1dc8cd;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+    margin: 15px;
+}
+
+
+/* CSS Section Hero */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/bg-banner.jpg") center top no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
+@media (min-width: 1025px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-height: 640px) {
+    #hero {
+        height: 120vh;
+    }
+}
+
+#hero .hero-text {
+    position: absolute;
+    left: 0;
+    top: 300px;
+    right: 0;
+    height: calc(50% - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#hero h2 {
+    margin: 30px 0 10px 0;
+    padding: 0 15px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+#hero p {
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    #hero p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+#hero .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    background: transparent;
+    border: 3px solid #ffff;
+    color: #ffff;
+}
+
+#hero .btn-get-started:hover {
+    color: #1dc8cd;
+    background: #ffff;
+}
+
+/* CSS Default Section */
+.section-parrent .section-judul {
+    font-size: 32px;
+    color: #111;
+    text-align: center;
+    font-weight: 400;
+}
+
+.section-parrent .section-deskripsi {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #777;
+    font-style: italic;
+}
+
+.section-parrent .section-line {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1dc8cd;
+    background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* CSS Tentang Kami */
+
+#tentang {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+#tentang .team {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#tentang .team .pic {
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 260px;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
+#tentang .team .pic img {
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+#tentang .team h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+#tentang .team span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+}
+
+#tentang .row {
+    margin-top: 50px;
+}
+
+/* CSS Artikel */
+#about {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+#about .about-img {
+    height: 510px;
+    overflow: hidden;
+}
+
+@media (min-width: 991px) {
+    #about .about-img {
+        margin-top: 90px;
+    }
+}
+
+
+#about .about-img img {
+    margin-left: -15px;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    border-right: solid 10px linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+    border-bottom: solid 10px linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+
+}
+
+@media (max-width: 768px) {
+    #about .about-img {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #about .about-img img {
+        margin-left: 0;
+    }
+
+    #about .content {
+        padding: 30px;
+    }
+
+    #tentang .row {
+        padding: 30px;
+    }
+}
+
+#about .content .h2 {
+    color: #333;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+#about .content h3 {
+    color: #777;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    font-style: italic;
+}
+
+#about .content p {
+    line-height: 26px;
+}
+
+#about .content p:last-child {
+    margin-bottom: 0;
+}
+
+#about .content i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #1dc8cd;
+}
+
+#about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about .content ul li {
+    padding-bottom: 10px;
+}
+
+/* CSS Layanan */
+
+#layanan {
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/bg-layanan.jpg") center top no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
+@media (min-width: 991px) {
+    #layanan {
+        padding: 60px;
+
+    }
+
+    #layanan .row {
+        display: flex;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
+.card .card-body {
+    height: 250px;
+    padding-top: 190px;
+}
+
+.card-title {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #ffff;
+}
+
+.card .btn {
+    background: #1dc8cd;
+    border: none;
+}
+
+.bg-img1 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan1.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bg-img2 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan2.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bg-img3 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan3.png") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bg-img4 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan4.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bg-img5 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan5.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.bg-img6 {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan6.png") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+@media (max-widht: 991px) {
+    .card {
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .card .card-body {
+        height: 250px;
+        color: #ffff;
+        padding-top: 100px;
+    }
+
+    .card-body p {
+        font-weight: bolder;
+        font-size: 14px;
+    }
+
+    .card .btn {
+        background: #1dc8cd;
+        border: none;
+    }
+
+    .bg-img1 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan1.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .bg-img2 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan2.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .bg-img3 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan3.png") no-repeat;
+        background-size: cover;
+    }
+
+    .bg-img4 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan4.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .bg-img5 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan5.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .bg-img6 {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.208)), url("../img/layanan6.png") no-repeat;
+        background-size: cover;
+    }
+}
+
+/* CSS Jadwal */
+
+#jadwal {
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    background: #d9d9d9;
+}
+
+.table {
+    width: 900px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("../img/bg-jadwal.jpg");
+    background-size: cover;
+    text-align: center;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+
+table thead tr th {
+    color: white;
+    font-size: 26px;
+}
+
+table tbody tr th {
+    color: #fff;
+}
+
+table tbody tr td {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .table {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* CSS Registrasi Form */
+
+#registrasi {
+    display: block;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 70px;
+    justify-content: center;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+    align-items: center;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8))
+}
+
+.container-registrasi {
+    background: #ffff;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: auto;
+}
+
+.container-registrasi .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container-registrasi .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 110px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8));
+}
+
+form .user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user .input-box input:focus,
+.user .input-box input:valid {
+    border-color: teal;
+}
+
+.form .layanan-detail {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+form .layanan-detail .layanan-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .category {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    text-align: center;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+#dot-1:checked~.category label .satu,
+#dot-2:checked~.category label .dua,
+#dot-3:checked~.category label .tiga,
+#dot-4:checked~.category label .empat,
+#dot-5:checked~.category label .lima,
+#dot-6:checked~.category label .enam {
+    background: teal;
+    border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8));
+}
+
+form .button input:hover {
+    transform: scale(0.99);
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8));
+}
+
+@media(max-width: 991px) {
+    .container-registrasi {
+        max-width: auto;
+    }
+
+    .user .input-box input {
+        height: 25px;
+        width: 100%;
+        outline: none;
+        font-size: 10px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    form .input-box span.details {
+        display: block;
+        font-weight: bolder;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    form .user .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .category {
+        width: 100%;
+    }
+
+    form .user {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+
+    .user::-webkit-scrollbar {
+        width: 25px;
+    }
+}
+
+@media(max-width: 991px) {
+    .container-registrasi form .category {
+        flex-direction: column;
+    }
+}
+
+/* CSS Kontak */
+#contact {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+}
+
+#contact .contact-about {
+    margin-left: 40px;
+}
+
+#contact .contact-about h3 {
+    font-size: 26px;
+    margin: 0 0 10px 40px;
+    padding: 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1dc8cd;
+}
+
+#contact .contact-about p {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: #888;
+}
+
+#contact .social-links {
+    padding-bottom: 20px;
+    padding-left: 32px;
+}
+
+#contact .social-links a {
+    font-size: 18px;
+    background: #fff;
+    color: #1dc8cd;
+    padding: 8px 0;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    border: 1px solid #1dc8cd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .social-links {
+    margin-left: 40px;
+}
+
+#contact .social-links a i {
+    line-height: 0;
+}
+
+#contact .social-links a:hover {
+    background: #1dc8cd;
+    color: #fff;
+}
+
+#contact .info {
+    color: #333333;
+    margin-left: 40px;
+}
+
+#contact .info i {
+    font-size: 32px;
+    color: #1dc8cd;
+    float: left;
+    line-height: 0;
+}
+
+#contact iframe {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgb(0, 0, 0);
+}
+
+#contact .info p {
+    padding: 0 0 10px 42px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+@media (min-width: 991px) {
+    #contact iframe {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    #contact {
+        padding: 50px;
+    }
+
+    #contact iframe {
+        width: 280px;
+    }
+}
+
+
+
+/* CSS Footer */
+
+#footer {
+    background: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+#footer .credits {
+    font-size: 13px;
+    color: #888;
+}
+
+#footer .footer-links a {
+    color: #666;
+    padding-left: 15px;
+}
+
+#footer .footer-links a:first-child {
+    padding-left: 0;
+}
+
+#footer .footer-links a:hover {
+    color: #1dc8cd;
+}
