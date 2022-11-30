@@ -7,3 +7,5 @@ This repo for project UTS and others.
   - AOS Library
   - Java Script
   - and Others
+  
+  LinkedIn : https://www.linkedin.com/feed/update/urn:li:share:7003632387813228544/
